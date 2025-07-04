@@ -1,17 +1,5 @@
 "use client"
 
-import Image from "next/image"
-import {
-  HomeIcon,
-  MagnifyingGlassIcon,
-  TvIcon,
-  TrashIcon,
-  Cog6ToothIcon,
-  PlayIcon,
-  CircleStackIcon,
-  ClockIcon,
-} from "@heroicons/react/24/outline"
-import bg_left_overlay from "../../public/assets/images/bg_left_overlay.png"
 import movie_card_img from "../../public/assets/images/movie_card.jpg"
 import banner_img from "../../public/assets/images/bg_3.jpeg"
 import banner_img2 from "../../public/assets/images/bg_2.jpeg"
@@ -50,16 +38,6 @@ const comedyMovies = [
   { id: 10, title: "Comedy 10", image: movie_card_img },
 ]
 
-const sidebarItems = [
-  { icon: HomeIcon, active: true },
-  { icon: MagnifyingGlassIcon, active: false },
-  { icon: TvIcon, active: false },
-  // { icon: TrashIcon, active: false },
-  // { icon: Cog6ToothIcon, active: false },
-  // { icon: PlayIcon, active: false },
-  // { icon: CircleStackIcon, active: false },
-  // { icon: ClockIcon, active: false },
-]
 
 
 const slidesData = [

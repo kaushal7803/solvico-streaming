@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-
+import { StaticImageData } from "next/image"
 interface SlideData {
   id: number
-  image: string
+  image: string | StaticImageData;
   title: string
   genres: string[]
 }
@@ -19,7 +18,7 @@ interface HorizontalSliderProps {
 
 export default function HorizontalSlider({ slides, autoPlay = true, autoPlayInterval = 5000 }: HorizontalSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  // const [isTransitioning, setIsTransitioning] = useState(false)
   useEffect(() => {
     if (!autoPlay) return;
 
@@ -33,12 +32,12 @@ export default function HorizontalSlider({ slides, autoPlay = true, autoPlayInte
 
 
 
-  const goToSlide = (index: number) => {
-    if (isTransitioning || index === currentSlide) return
-    setIsTransitioning(true)
-    setCurrentSlide(index)
-    setTimeout(() => setIsTransitioning(false), 500)
-  }
+  // const goToSlide = (index: number) => {
+  //   if (isTransitioning || index === currentSlide) return
+  //   setIsTransitioning(true)
+  //   setCurrentSlide(index)
+  //   setTimeout(() => setIsTransitioning(false), 500)
+  // }
 
   return (
     <div className="px-0 lg:px-8 rounded-bl-2xl">

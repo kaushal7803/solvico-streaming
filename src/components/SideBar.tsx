@@ -1,12 +1,10 @@
 "use client"
 
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { HomeIcon, TvIcon } from 'lucide-react';
+
 import React from 'react'
 import HomeSvg from '../../public/assets/svgs/HomeSvg';
 import SearchSvg from '../../public/assets/svgs/SearchSvg';
 import WatchListSvg from '../../public/assets/svgs/WatchListSvg';
-import path from 'path';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 const SideBar = () => {

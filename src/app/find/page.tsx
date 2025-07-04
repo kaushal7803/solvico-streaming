@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import star_svg from "../../../public/assets/images/start_svg.svg"
 
 import SideBar from "@/components/SideBar";
 import SideBarMobile from "@/components/SideBarMobile";
@@ -14,9 +13,7 @@ import img6 from "../../../public/assets/images/watchlist_2.png"
 import img7 from "../../../public/assets/images/watchlist_3.png"
 
 import { AnimatePresence, motion } from 'framer-motion';
-import movie_img from "../../../public/assets/images/movie_card.png"
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { title } from "process";
+
 import { useState } from "react";
 import FilterSvg from "../../../public/assets/svgs/FilterSvg";
 

@@ -3,8 +3,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { HomeIcon, TvIcon } from 'lucide-react';
+
 import HomeSvg from '../../public/assets/svgs/HomeSvg';
 import SearchSvg from '../../public/assets/svgs/SearchSvg';
 import WatchListSvg from '../../public/assets/svgs/WatchListSvg';

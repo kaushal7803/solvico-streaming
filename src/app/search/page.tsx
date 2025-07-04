@@ -1,13 +1,10 @@
 "use client"
 
 import Image from "next/image";
-import star_svg from "../../../public/assets/images/start_svg.svg"
 
 import SideBar from "@/components/SideBar";
 import SideBarMobile from "@/components/SideBarMobile";
-import watchlist_image from "../../../public/assets/images/watchlist.png"
-import watchlist_image2 from "../../../public/assets/images/watchlist_2.png"
-import watchlist_image3 from "../../../public/assets/images/watchlist_3.png"
+
 import movie_img from "../../../public/assets/images/movie_card.png"
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
@@ -31,15 +28,24 @@ export default function Search() {
 
 
                         <div className="w-full py-8 relative">
-                            <input
+                            {/* <input
                                 type="text"
                                 placeholder="Type title, categories, years, etc"
                                 className="bg-[#252836] h-full w-full py-4 pl-14 pr-8 rounded-full focus:outline-none text-white"
+                            /> */}
+
+                            <input
+                                type="text"
+                                autoComplete="off"
+                                autoCorrect="off"
+                                spellCheck={false}
+                                placeholder="Type title, categories, years, etc"
+                                className="bg-[#252836] h-full w-full py-4 pl-14 pr-8 rounded-full focus:outline-none text-white"
                             />
+
                             <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 absolute left-6 top-1/2 transform -translate-y-1/2 pointer-events-none" />
                         </div>
                         <section className="space-y-6">
-                            {/* <h2 className="text-2xl lg:text-3xl font-bold">People who like this also like</h2> */}
                             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-4">
                                 {recommendations.map((item, index) => (
                                     <div key={index} className="hover:scale-105 transition-transform duration-300">
@@ -48,20 +54,14 @@ export default function Search() {
                                             className="relative aspect-[2/3] rounded-t-2xl overflow-hidden  cursor-pointer"
                                         >
                                             <Image
-                                                src={movie_img || "/placeholder.svg"}
+                                                src={movie_img}
                                                 alt={`Recommendation ${index + 1}`}
                                                 fill
                                                 className="object-cover"
                                             />
 
                                             <div className="absolute top-2 right-2 backdrop-blur-[20px] rounded-lg bg-[#25283652] px-3 py-1 flex items-center gap-1">
-                                                <Image
-                                                    src={star_svg}
-                                                    alt="Star"
-                                                    width={14}
-                                                    height={14}
-                                                    className="object-contain"
-                                                />
+
                                                 <span className="text-[#FF8700] font-medium text-xs sm:text-sm">4.5</span>
                                             </div>
 

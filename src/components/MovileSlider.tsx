@@ -3,11 +3,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import MovieCard from "./MovieCard";
+import { StaticImageData } from "next/image";
 
 interface Movie {
     id: number;
     title: string;
-    image: string;
+    image: string | StaticImageData;
 }
 
 interface MovileSliderProps {

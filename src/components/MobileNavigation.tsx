@@ -45,9 +45,8 @@ export default function MobileNavigation() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`md:hidden fixed left-0 top-0 h-full w-64 bg-gray-900 transform transition-transform duration-300 z-40 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`md:hidden fixed left-0 top-0 h-full w-64 bg-gray-900 transform transition-transform duration-300 z-40 ${isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex flex-col p-6 pt-16">
           {/* Logo */}
@@ -63,9 +62,8 @@ export default function MobileNavigation() {
             {sidebarItems.map((item, index) => (
               <button
                 key={index}
-                className={`flex items-center p-3 rounded-lg transition-colors duration-200 ${
-                  item.active ? "bg-gray-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
-                }`}
+                className={`flex items-center p-3 rounded-lg transition-colors duration-200 ${item.active ? "bg-gray-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 <item.icon className="w-6 h-6 mr-3" />

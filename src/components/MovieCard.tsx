@@ -1,7 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-const MovieCard = ({ movie }: { movie: { id: number; title: string; image: any } }) => {
+
+
+const MovieCard = ({ movie }: { movie: { id: number; title: string; image: StaticImageData | string } }) => {
   return (
     <Link href={"/overview"}>
       <div key={movie.id} className="flex-shrink-0 group cursor-pointer">
