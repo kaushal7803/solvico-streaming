@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react"
 import SideBar from "@/components/SideBar"
 import MovileSlider from "@/components/MovileSlider"
 import SideBarMobile from "@/components/SideBarMobile"
+import { fetchCarouselMovies } from "@/lib/api"
 const topRatedMovies = [
   { id: 1, title: "Spider-Man", image: movie_card_img },
   { id: 2, title: "Spider-Man: Homecoming", image: movie_card_img },
@@ -75,6 +76,20 @@ const slidesData = [
 
 
 export default function StreamingApp() {
+
+  const [carouselData, setCarouselData] = useState([])
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchCarouselMovies()
+      console.log("🎬 Carousel Data:", data)
+      setCarouselData(data)
+    }
+
+    getData()
+  }, [])
+
+  console.log(carouselData)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
